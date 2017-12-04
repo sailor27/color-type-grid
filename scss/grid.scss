@@ -1,14 +1,11 @@
 @import "variables";
 @import "mixins";
-
 *,
 *:after,
 *:before {
   margin: 0;
   padding: 0;
-
   @include border-box;
-
 }
 *:not(body):not(html):not(p){
   border:1px dashed lightblue;
@@ -42,10 +39,30 @@ img {
     max-width: $grid-max-width;
   }
   @for $i from 1 through $grid-columns {
-
     .column-#{$i} {
       width: 100% / $grid-columns * $i;
     }
+  }
+}
+//colors🎨
+$papaya: #E24E42;
+$mustard: #E9B000;
+$blush: #EB6E80;
+$aqua: #008F95;
 
+//COLORS ARRAY
+$colors:(
+'primary': $papaya,
+'secondary': $mustard,
+'tertiary': $blush,
+'accent': $aqua,
+);
+
+//SET BACKGROUND COLOR CLASSES
+@each $color-type, $hex in $colors
+{
+  .bg-#{$color-type}
+  {
+    background-color: $hex;
   }
 }

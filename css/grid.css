@@ -79,5 +79,16 @@ img {
 
   .column-12 {
     width: 100%; } }
+.bg-primary {
+  background-color: #E24E42; }
+
+.bg-secondary {
+  background-color: #E9B000; }
+
+.bg-tertiary {
+  background-color: #EB6E80; }
+
+.bg-accent {
+  background-color: #008F95; }
 
 /*# sourceMappingURL=grid.css.map */
