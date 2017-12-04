@@ -7,14 +7,15 @@
   padding: 0;
   @include border-box;
 }
-*:not(body):not(html):not(p){
-  border:1px dashed lightblue;
+// *:not(body):not(html):not(p){
+//   border:1px dashed lightblue;
+// }
+body{
+  color: #333;
+  font-family: helvetica, sans-serif;
 }
-img {
-  width: auto;
-  max-width: 100%;
-  height: auto !important;
-}
+
+//GRID SETUP/STYLING
 .wrapper{
   width: 100%;
   margin: 0 auto;
@@ -23,27 +24,61 @@ img {
 .row {
   @extend %clearfix;
 }
+
 // 😎 whoa cool selector
-[class*='column-']{
+[class*='col-']{
   float: left;
-  padding: 1em;
+  // padding: 1em;
   width: 100%;
   min-height: 1px;
-  background-color: palevioletred;
-  text-align: center;
+  padding: 1em;
+  background-color: $white;
 }
+
+
 // media queries🖥
+@media #{$breakpoint-small} {
+    body {
+    background-color: yellow;
+    }
+  .wrapper{
+    width: 100%;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
 @media #{$breakpoint-medium} {
+  body{
+    background-color: pink;
+  }
   .wrapper{
     width: 95%;
     max-width: $grid-max-width;
   }
   @for $i from 1 through $grid-columns {
-    .column-#{$i} {
+    .col-med-#{$i} {
       width: 100% / $grid-columns * $i;
     }
   }
 }
+@media #{$breakpoint-large} {
+  body{
+    background-color: lightblue;
+  }
+  .wrapper{
+    width: 95%;
+    max-width: $grid-max-width;
+  }
+  @for $i from 1 through $grid-columns {
+    .col-lg-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}
+
 //colors🎨
 $papaya: #E24E42;
 $mustard: #E9B000;
@@ -64,5 +99,36 @@ $colors:(
   .bg-#{$color-type}
   {
     background-color: $hex;
+  }
+}
+
+//ELEMENT STYLING
+h1 {
+  font-size: 1.8em;
+  color: #444;
+  font-weight: 200;
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: #444;
+  font-weight: 600;
+}
+
+.swatch{
+  min-height: $swatch-height;
+}
+.swatch-info{
+  min-height: $swatch-height;
+  [class*='col-']{
+    padding: 0;
+  }
+  .label{
+    text-align: left;
+  }
+  .label-color{
+    text-align: right;
   }
 }

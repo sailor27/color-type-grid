@@ -1,7 +1,21 @@
 // grid bariables
 $grid-columns: 12;
-$grid-max-width: 65em;
+$grid-max-width: 90em;
 
 //breakpoints
-$breakpoint-small: "only screen and (min-width: 20em)";
-$breakpoint-medium: "only screen and (min-width: 30em)";
+$breakpoint-small: "only screen and (max-width: 399px)";
+$breakpoint-medium: "only screen and (min-width: 400px) and (max-width:999px)";
+$breakpoint-large: "only screen and (min-width: 1000px)";
+
+//colors
+$white: #fff;
+$black: #000;
+
+//color swatch colors
+$papaya: #E24E42;
+$mustard: #E9B000;
+$blush: #EB6E80;
+$aqua: #008F95;
+
+//color swatch height
+$swatch-height: 135px;
