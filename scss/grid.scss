@@ -100,7 +100,19 @@ $colors:(
   {
     background-color: $hex;
   }
+// SET TINT AND TONE FOR EACH COLOR
+  .bg-#{$color-type}-tint
+  {
+    background: lighten(saturate($hex, $tint-saturation-amt),$tint-amt);
+  }
+  .bg-#{$color-type}-shade
+  {
+    background: darken(saturate($hex, $shade-saturation-amt),$shade-amt);
+  }
 }
+
+
+
 
 //ELEMENT STYLING
 h1 {
@@ -131,4 +143,7 @@ h3 {
   .label-color{
     text-align: right;
   }
+}
+.tandt{
+  min-height: $swatch-height;
 }

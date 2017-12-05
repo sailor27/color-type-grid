@@ -165,14 +165,38 @@ body {
 .bg-primary {
   background-color: #E24E42; }
 
+.bg-primary-tint {
+  background: #f0685d; }
+
+.bg-primary-shade {
+  background: #e91908; }
+
 .bg-secondary {
   background-color: #E9B000; }
+
+.bg-secondary-tint {
+  background: #ffc513; }
+
+.bg-secondary-shade {
+  background: #b68900; }
 
 .bg-tertiary {
   background-color: #EB6E80; }
 
+.bg-tertiary-tint {
+  background: #f68c9b; }
+
+.bg-tertiary-shade {
+  background: #fa2c49; }
+
 .bg-accent {
   background-color: #008F95; }
+
+.bg-accent-tint {
+  background: #00b6be; }
+
+.bg-accent-shade {
+  background: #005e62; }
 
 h1 {
   font-size: 1.8em;
@@ -197,5 +221,8 @@ h3 {
     text-align: left; }
   .swatch-info .label-color {
     text-align: right; }
+
+.tandt {
+  min-height: 135px; }
 
 /*# sourceMappingURL=grid.css.map */
