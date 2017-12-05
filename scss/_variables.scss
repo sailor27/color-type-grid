@@ -4,18 +4,25 @@ $grid-max-width: 90em;
 
 //breakpoints
 $breakpoint-small: "only screen and (max-width: 399px)";
-$breakpoint-medium: "only screen and (min-width: 400px) and (max-width:999px)";
+$breakpoint-medium: "only screen and (min-width: 400px)";
 $breakpoint-large: "only screen and (min-width: 1000px)";
 
 //colors
 $white: #fff;
 $black: #000;
 
-//color swatch colors
-$papaya: #E24E42;
-$mustard: #E9B000;
-$blush: #EB6E80;
-$aqua: #008F95;
+//colors🎨
+$primary: #E24E42;
+$primary-name: 'Papaya';
+
+$secondary: #E9B000;
+$secondary-name: 'Mustard';
+
+$tertiary: #EB6E80;
+$tertiary-name: 'Blush';
+
+$accent: #008F95;
+$accent-name: 'Aqua';
 
 //color swatch height
 $swatch-height: 135px;
@@ -25,3 +32,5 @@ $tint-amt: 8;
 $tint-saturation-amt:10;
 $shade-amt: 10;
 $shade-saturation-amt:20;
+
+$mix-weight: 65%;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" >
     <link rel="stylesheet" href="css/grid.css" type="text/css">
     <title>GRID</title>
   </head>
@@ -12,7 +12,7 @@
       <h3>Primary Colors</h3>
       <!-- papaya -->
       <div class="row">
-        <div class="col-lg-3 col-med-6 col-sm-12">
+        <div class="col-lg-3 col-med-6 col-sm-12 color-primary">
           <div class="swatch bg-primary"></div>
           <div class="swatch-info">
             <div class="row">
@@ -22,15 +22,15 @@
                 <p class="label">HSL:</p>
               </div>
               <div class="col-lg-9 col-med-9 col-sm-9">
-                <p class="label label-color label-name">test-color</p>
-                <p class="label label-color label-rgb">red / gre / bla</p>
-                <p class="label label-color label-hsl">hug / sat / lov</p>
+                <p class="label label-color label-name"> Papaya</p>
+                <p class="label label-color label-rgb"></p>
+                <p class="label label-color label-hsl"></p>
               </div>
             </div>
           </div>
         </div>
         <!-- mustard -->
-        <div class="col-lg-3 col-med-6 col-sm-12">
+        <div class="col-lg-3 col-med-6 col-sm-12 color-secondary">
           <div class="swatch bg-secondary"></div>
           <div class="swatch-info">
             <div class="row">
@@ -40,15 +40,15 @@
                 <p class="label">HSL:</p>
               </div>
               <div class="col-lg-9 col-med-9 col-sm-9">
-                <p class="label label-color label-name">test-color</p>
-                <p class="label label-color label-rgb">red / gre / bla</p>
-                <p class="label label-color label-hsl">hug / sat / lov</p>
+                <p class="label label-color label-name"></p>
+                <p class="label label-color label-rgb"></p>
+                <p class="label label-color label-hsl"></p>
               </div>
             </div>
           </div>
         </div>
         <!-- blush -->
-        <div class="col-lg-3 col-med-6 col-sm-12">
+        <div class="col-lg-3 col-med-6 col-sm-12 color-tertiary">
           <div class="swatch bg-tertiary"></div>
           <div class="swatch-info">
             <div class="row">
@@ -58,15 +58,15 @@
                 <p class="label">HSL:</p>
               </div>
               <div class="col-lg-9 col-med-9 col-sm-9">
-                <p class="label label-color label-name">test-color</p>
-                <p class="label label-color label-rgb">red / gre / bla</p>
-                <p class="label label-color label-hsl">hug / sat / lov</p>
+                <p class="label label-color label-name"></p>
+                <p class="label label-color label-rgb"></p>
+                <p class="label label-color label-hsl"></p>
               </div>
             </div>
           </div>
         </div>
         <!-- aqua -->
-        <div class="col-lg-3 col-med-6 col-sm-12">
+        <div class="col-lg-3 col-med-6 col-sm-12 color-accent">
           <div class="swatch bg-accent"></div>
           <div class="swatch-info">
             <div class="row">
@@ -76,9 +76,9 @@
                 <p class="label">HSL:</p>
               </div>
               <div class="col-lg-9 col-med-9 col-sm-9">
-                <p class="label label-color label-name">test-color</p>
-                <p class="label label-color label-rgb">red / gre / bla</p>
-                <p class="label label-color label-hsl">hug / sat / lov</p>
+                <p class="label label-color label-name"></p>
+                <p class="label label-color label-rgb"></p>
+                <p class="label label-color label-hsl"></p>
               </div>
             </div>
           </div>
@@ -120,9 +120,94 @@
           </div>
         </div>
       </div>
+      <h1>Generated Colors</h1>
       <div class="row">
-
+        <!-- PAPAYA -->
+        <div class="swatch col-lg-3 col-med-6 col-sm-12 primary">
+          <h4>Papaya</h4>
+          <div class="swatch bg-primary"></div>
+          <div class="mixed-with-primary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-secondary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-tertiary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-accent">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+        </div>
+        <!-- MUSTARD -->
+        <div class="swatch col-lg-3 col-med-6 col-sm-12 secondary">
+          <h4>Mustard</h4>
+          <div class="swatch bg-secondary"></div>
+          <div class="mixed-with-primary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-secondary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-tertiary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-accent">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+        </div>
+        <!-- BLUSH -->
+        <div class="swatch col-lg-3 col-med-6 col-sm-12 tertiary">
+          <h4>Blush</h4>
+          <div class="swatch bg-tertiary"></div>
+          <div class="mixed-with-primary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-secondary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-tertiary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-accent">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+        </div>
+        <!-- AQUA -->
+        <div class="swatch col-lg-3 col-med-6 col-sm-12 accent">
+          <h4>Aqua</h4>
+          <div class="swatch bg-accent"></div>
+          <div class="mixed-with-primary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-secondary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-tertiary">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+          <div class="mixed-with-accent">
+            <h4 class="subheader"></h4>
+            <div class="swatch swatch-small"></div>
+          </div>
+        </div>
       </div>
+
       <div class="row">
 
       </div>

@@ -38,22 +38,19 @@ body{
 
 // media queries🖥
 @media #{$breakpoint-small} {
-    body {
-    background-color: yellow;
+    .wrapper{
+      width: 100%;
     }
-  .wrapper{
-    width: 100%;
-  }
-  @for $i from 1 through $grid-columns {
-    .col-sm-#{$i} {
-      width: 100% / $grid-columns * $i;
-    }
+
+    @for $i from 1 through $grid-columns {
+      .col-sm-#{$i} {
+        width: 100% / $grid-columns * $i;
+      }
   }
 }
+
 @media #{$breakpoint-medium} {
-  body{
-    background-color: pink;
-  }
+
   .wrapper{
     width: 95%;
     max-width: $grid-max-width;
@@ -65,9 +62,7 @@ body{
   }
 }
 @media #{$breakpoint-large} {
-  body{
-    background-color: lightblue;
-  }
+
   .wrapper{
     width: 95%;
     max-width: $grid-max-width;
@@ -79,23 +74,21 @@ body{
   }
 }
 
-//colors🎨
-$papaya: #E24E42;
-$mustard: #E9B000;
-$blush: #EB6E80;
-$aqua: #008F95;
-
 //COLORS ARRAY
 $colors:(
-'primary': $papaya,
-'secondary': $mustard,
-'tertiary': $blush,
-'accent': $aqua,
+'primary': $primary,
+'secondary': $secondary,
+'tertiary': $tertiary,
+'accent': $accent
 );
 
 //SET BACKGROUND COLOR CLASSES
 @each $color-type, $hex in $colors
 {
+  // LABEL RGB VALUES
+  .color-#{$color-type} .label-rgb:before{
+    content: '#{red($hex)} / #{green($hex)} / #{blue($hex)}';
+  }
   .bg-#{$color-type}
   {
     background-color: $hex;
@@ -109,19 +102,30 @@ $colors:(
   {
     background: darken(saturate($hex, $shade-saturation-amt),$shade-amt);
   }
+  .primary .mixed-with-#{$color-type} .swatch-small {
+    background-color: mix($hex, $primary, $mix-weight);
+  }
+  .secondary .mixed-with-#{$color-type} .swatch-small {
+    background-color: mix($hex, $secondary, $mix-weight);
+  }
+  .tertiary .mixed-with-#{$color-type} .swatch-small {
+    background-color: mix($hex, $tertiary, $mix-weight);
+  }
+  .accent .mixed-with-#{$color-type} .swatch-small {
+    background-color: mix($hex, $accent, $mix-weight);
+  }
 }
-
-
-
 
 //ELEMENT STYLING
 h1 {
+  padding-left: 0.5em;
   font-size: 1.8em;
   color: #444;
   font-weight: 200;
 }
 
 h3 {
+  padding-left: 1em;
   margin-top: 10px;
   margin-bottom: 5px;
   font-size: 1em;
@@ -130,7 +134,11 @@ h3 {
 }
 
 .swatch{
+  margin-bottom: 1em;
   min-height: $swatch-height;
+}
+.swatch-small{
+  min-height: $swatch-height / 3;
 }
 .swatch-info{
   min-height: $swatch-height;
