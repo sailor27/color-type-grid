@@ -23,7 +23,13 @@ $tertiary-name: 'Blush';
 
 $accent: #008F95;
 $accent-name: 'Aqua';
-
+//names
+$color-names: (
+    primary: $primary-name,
+    secondary: $secondary-name,
+    tertiary: $tertiary-name,
+    accent: $accent-name
+);
 //color swatch height
 $swatch-height: 135px;
 

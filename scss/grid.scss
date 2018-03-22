@@ -83,12 +83,24 @@ $colors:(
 );
 
 //SET BACKGROUND COLOR CLASSES
+@each $color-type, $color-name in $color-names {
+    // Get the color's name
+    .color-#{$color-type} .label-name:before,
+    .color-#{$color-type} h3.subheader:before {
+        content: '#{$color-name}';
+    }
+}
 @each $color-type, $hex in $colors
 {
   // LABEL RGB VALUES
   .color-#{$color-type} .label-rgb:before{
     content: '#{red($hex)} / #{green($hex)} / #{blue($hex)}';
   }
+
+	.color-#{$color-type} .label-hsl:before {
+		content: '#{round(hue($hex))} / #{round(saturation($hex))} / #{round(lightness($hex))}';
+	}
+
   .bg-#{$color-type}
   {
     background-color: $hex;
@@ -115,6 +127,7 @@ $colors:(
     background-color: mix($hex, $accent, $mix-weight);
   }
 }
+
 
 //ELEMENT STYLING
 h1 {
